@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    int T,a,b,i=0,sum;
+    scanf("%d",&T);
+        if(T<=125)
+        while(T-- && scanf("%d %d",&a,&b)){
+                    sum=0;
+                    sum=a+b;
+                    printf("Case %d: %d\n",++i,sum);
+                        }
+        return 0;
+    }
+
+
