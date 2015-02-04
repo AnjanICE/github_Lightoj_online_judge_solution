@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define pi 3.1415926535897932384626433832795
+main()
+{
+    int T,i=0;
+    double r=0,A,ans;
+    scanf("%d",&T);
+    if( i<=T )
+        while(T-- && scanf("%lf",&r)){
+                ans=0;
+                A=pi*r*r;
+                ans=4*r*r-A;
+            printf("Case %d: %0.2lf\n",++i,ans);
+   }
+   return 0;
+}
