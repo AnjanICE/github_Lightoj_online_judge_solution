@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define PI 3.1415926535897932385
+#include <math.h>
+int main()
+{
+    int i=0,T,n;
+    double alpha,a,r,R;
+    scanf("%d",&T);
+    while(T-- && scanf("%lf %d",&R,&n)){
+    if(n==2){
+        r=R/2.0;
+        printf("Case %d: %d\n",++i,(int)r);}
+    else{
+        alpha=PI/2.0-PI/(double)n;
+        a=R/tan(alpha);
+        r=a*tan(alpha/2.0);
+        printf("Case %d: %.12lf\n",++i,r);
+        }
+    }
+return 0;
+}
