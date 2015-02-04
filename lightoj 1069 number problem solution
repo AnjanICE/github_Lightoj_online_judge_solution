@@ -1,0 +1,12 @@
+#include <stdio.h>
+main()
+{
+    int T,pos,lift,i=0,z;
+    scanf("%d",&T);
+        if(i<=T)
+        while(T-- && scanf("%d %d",&pos,&lift)){
+        z=(abs(lift-pos)*4+(pos*4)+19);
+        printf("Case %d: %d\n",++i,z);
+        }
+    return 0;
+    }
