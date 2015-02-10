@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+const double EPS=1e-9;
+main()
+{
+    int t,i=0;
+    double r1,r2,r3,s1,s2,s3,s;
+    double A,B,C,root,area;
+    scanf("%d",&t);
+        while(t-- && scanf("%lf %lf %lf",&r1,&r2,&r3)==3)
+        {
+        s1=r1+r2;s2=r2+r3;s3=r3+r1;
+		s =(s1+s2+s3)*0.5;
+		root=sqrt(s*(s -s1)*(s-s2)*(s-s3));
+		A=acos((s1*s1+s3*s3-s2*s2)/(2.0*s1*s3));
+		B=acos((s1*s1+s2*s2-s3*s3)/(2.0*s1*s2));
+		C=acos((s2*s2+s3*s3-s1*s1)/(2.0*s2*s3));
+		area =root-0.5*A*r1*r1-0.5*B*r2*r2-0.5*C*r3*r3;
+		printf("Case %d: %.8lf\n",++i,area+EPS);
+        }
+        return 0;
+    }
