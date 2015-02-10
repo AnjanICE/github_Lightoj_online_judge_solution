@@ -1,0 +1,22 @@
+#include <stdio.h>
+int rev(int n) {
+    int nn=n,m=0;
+    while(nn) {
+        m=m*10+nn%10;
+        nn=nn/10;
+    }
+    return m==n;
+}
+int main() {
+    int t,i=0,n;
+    scanf("%d",&t);
+    while(t--) {
+        scanf("%d", &n);
+        printf("Case %d: ",++i);
+        if (rev(n))
+            printf("Yes\n");
+        else
+            printf("No\n");
+    }
+    return 0;
+}
