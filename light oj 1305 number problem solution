@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int t,ax,ay,bx,by,cx,cy,dx,dy,area,i=0,q;
+    scanf("%d",&t);
+        while(t-- && scanf("%d%d%d%d%d%d",&ax,&ay,&bx,&by,&cx,&cy)==6){
+        dx=cx+ax-bx;
+        dy=cy+ay-by;
+        q=((ax*by)+(bx*cy)+(cx*dy)+(dx*ay))-((ay*bx)+(by*cx)+(cy*dx)+(dy*ax));
+        if(q<0)
+            q*=-1;
+        area=0.5*q;
+        printf("Case %d: %d %d %d\n",++i,dx,dy,area);
+    }
+}
