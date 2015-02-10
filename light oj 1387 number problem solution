@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+	int test,i,sum,amount,n;
+	char word[8];
+	scanf("%d",&test);
+	for(i=1;i<=test;i++) {
+		scanf("%d",&n);
+		sum=0;
+		printf("Case %d:\n",i);
+		while(n--) {
+			scanf("%s",word);
+			if(word[0] == 'd') {
+				scanf("%d",&amount);
+				sum += amount;
+			}
+			else printf("%d\n", sum);
+		}
+	}
+	return 0;
+}
